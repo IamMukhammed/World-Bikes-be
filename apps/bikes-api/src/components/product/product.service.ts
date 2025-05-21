@@ -134,7 +134,7 @@ export class ProductService {
 		const {
 			memberId,
 			locationList,
-			roomsList,
+			engineSizeList,
 			bedsList,
 			typeList,
 			periodsRange,
@@ -145,7 +145,7 @@ export class ProductService {
 		} = input.search;
 		if (memberId) match.memberId = shapeIntoMongoObjectId(memberId);
 		if (locationList && locationList.length) match.productLocation = { $in: locationList };
-		if (roomsList && roomsList.length) match.productRooms = { $in: roomsList };
+		if (engineSizeList && engineSizeList.length) match.productEngineSize = { $in: engineSizeList };
 		if (bedsList && bedsList.length) match.productBeds = { $in: bedsList };
 		if (typeList && typeList.length) match.productType = { $in: typeList };
 

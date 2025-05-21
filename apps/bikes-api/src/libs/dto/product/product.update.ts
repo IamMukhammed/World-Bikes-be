@@ -49,7 +49,7 @@ export class ProductUpdate {
 	@IsInt()
 	@Min(1)
 	@Field(() => Int, { nullable: true })
-	productRooms?: number;
+	productEngineSize?: number;
 
 	@IsOptional()
 	@Field(() => [String], { nullable: true })

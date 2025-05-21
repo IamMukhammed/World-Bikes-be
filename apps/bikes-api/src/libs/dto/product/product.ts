@@ -34,7 +34,7 @@ export class Product {
 	productBeds: number;
 
 	@Field(() => Int)
-	productRooms: number;
+	productEngineSize: number;
 
 	@Field(() => Int)
 	productViews: number;

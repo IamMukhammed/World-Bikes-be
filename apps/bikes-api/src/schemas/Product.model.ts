@@ -46,7 +46,7 @@ const ProductSchema = new Schema(
 			required: true,
 		},
 
-		productRooms: {
+		productEngineSize: {
 			type: Number,
 			required: true,
 		},

@@ -43,7 +43,7 @@ export class ProductInput {
 	@IsInt()
 	@Min(1)
 	@Field(() => Int)
-	productRooms: number;
+	productEngineSize: number;
 
 	@IsNotEmpty()
 	@Field(() => [String])
@@ -112,7 +112,7 @@ class PISearch {
 
 	@IsOptional()
 	@Field(() => [Int], { nullable: true })
-	roomsList?: Number[];
+	engineSizeList?: Number[];
 
 	@IsOptional()
 	@Field(() => [Int], { nullable: true })
