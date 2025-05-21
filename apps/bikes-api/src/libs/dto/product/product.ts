@@ -30,10 +30,10 @@ export class Product {
 	@Field(() => Number)
 	productSquare: number;
 
-	@Field(() => Int)
-	productBeds: number;
+	@Field(() => Int, { nullable: true })
+	productYears: number;
 
-	@Field(() => Int)
+	@Field(() => Int, { nullable: true })
 	productEngineSize: number;
 
 	@Field(() => Int)
@@ -59,6 +59,9 @@ export class Product {
 
 	@Field(() => Boolean)
 	productRent: boolean;
+
+	@Field(() => Boolean)
+	productSale: boolean;
 
 	@Field(() => String)
 	memberId: ObjectId;

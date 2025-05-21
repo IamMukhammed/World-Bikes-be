@@ -146,7 +146,7 @@ export class ProductService {
 		if (memberId) match.memberId = shapeIntoMongoObjectId(memberId);
 		if (locationList && locationList.length) match.productLocation = { $in: locationList };
 		if (engineSizeList && engineSizeList.length) match.productEngineSize = { $in: engineSizeList };
-		if (bedsList && bedsList.length) match.productBeds = { $in: bedsList };
+		if (bedsList && bedsList.length) match.productYears = { $in: bedsList };
 		if (typeList && typeList.length) match.productType = { $in: typeList };
 
 		if (pricesRange) match.productPrice = { $gte: pricesRange.start, $lte: pricesRange.end };

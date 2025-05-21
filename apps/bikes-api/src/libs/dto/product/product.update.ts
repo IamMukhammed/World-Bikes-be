@@ -43,7 +43,7 @@ export class ProductUpdate {
 	@IsInt()
 	@Min(1)
 	@Field(() => Int, { nullable: true })
-	productBeds?: number;
+	productYears?: number;
 
 	@IsOptional()
 	@IsInt()
@@ -67,6 +67,10 @@ export class ProductUpdate {
 	@IsOptional()
 	@Field(() => Boolean, { nullable: true })
 	productRent?: boolean;
+
+	@IsOptional()
+	@Field(() => Boolean, { nullable: true })
+	productSale?: boolean;
 
 	soldAt?: Date;
 

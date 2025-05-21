@@ -41,7 +41,7 @@ const ProductSchema = new Schema(
 			required: true,
 		},
 
-		productBeds: {
+		productYears: {
 			type: Number,
 			required: true,
 		},
@@ -86,6 +86,11 @@ const ProductSchema = new Schema(
 		},
 
 		productRent: {
+			type: Boolean,
+			default: false,
+		},
+
+		productSale: {
 			type: Boolean,
 			default: false,
 		},

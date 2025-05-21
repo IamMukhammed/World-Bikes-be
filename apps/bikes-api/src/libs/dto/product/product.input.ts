@@ -37,7 +37,7 @@ export class ProductInput {
 	@IsInt()
 	@Min(1)
 	@Field(() => Int)
-	productBeds: number;
+	productYears: number;
 
 	@IsNotEmpty()
 	@IsInt()
@@ -61,6 +61,10 @@ export class ProductInput {
 	@IsOptional()
 	@Field(() => Boolean, { nullable: true })
 	productRent?: boolean;
+	
+	@IsOptional()
+	@Field(() => Boolean, { nullable: true })
+	productSale?: boolean;
 
 	memberId?: ObjectId;
 
