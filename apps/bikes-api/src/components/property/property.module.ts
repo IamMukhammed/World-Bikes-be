@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ProductResolver } from './product.resolver';
-import { ProductService } from './product.service';
+import { PropertyResolver } from './property.resolver';
+import { PropertyService } from './property.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import ProductSchema from '../../schemas/Product.model';
+import PropertySchema from '../../schemas/Property.model';
 import { AuthModule } from '../auth/auth.module';
 import { ViewModule } from '../view/view.module';
 import { MemberModule } from '../member/member.module';
@@ -12,8 +12,8 @@ import { LikeModule } from '../like/like.module';
 	imports: [
 		MongooseModule.forFeature([
 			{
-				name: 'Product',
-				schema: ProductSchema,
+				name: 'Property',
+				schema: PropertySchema,
 			},
 		]),
 		AuthModule,
@@ -21,7 +21,7 @@ import { LikeModule } from '../like/like.module';
 		MemberModule,
 		LikeModule,
 	],
-	providers: [ProductResolver, ProductService],
-	exports: [ProductService],
+	providers: [PropertyResolver, PropertyService],
+	exports: [PropertyService],
 })
-export class ProductModule {}
+export class PropertyModule {}

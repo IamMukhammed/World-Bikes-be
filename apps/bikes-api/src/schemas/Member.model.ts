@@ -56,7 +56,7 @@ const MemberSchema = new Schema(
 			type: String,
 		},
 
-		memberProducts: {
+		memberProperties: {
 			type: Number,
 			default: 0,
 		},

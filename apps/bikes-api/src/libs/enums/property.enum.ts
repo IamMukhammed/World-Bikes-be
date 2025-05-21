@@ -1,6 +1,6 @@
 import { registerEnumType } from '@nestjs/graphql';
 
-export enum ProductType {
+export enum PropertyType {
 	STANDARD = 'STANDARD', 		// Classic all-purpose bikes
 	CRUISER = 'CRUISER', 		// Harley-style low seat, long body
 	SPORT = 'SPORT', 			// High-speed, performance bikes
@@ -12,21 +12,20 @@ export enum ProductType {
 	MOPED = 'MOPED', 			// Small engine, pedal-like
 	CAFE_RACER = 'CAFE RACER', 	// Retro-style lightweight racer
 }
-
-registerEnumType(ProductType, {
-	name: 'ProductType',
+registerEnumType(PropertyType, {
+	name: 'PropertyType',
 });
 
-export enum ProductStatus {
+export enum PropertyStatus {
 	ACTIVE = 'ACTIVE',
 	SOLD = 'SOLD',
 	DELETE = 'DELETE',
 }
-registerEnumType(ProductStatus, {
-	name: 'ProductStatus',
+registerEnumType(PropertyStatus, {
+	name: 'PropertyStatus',
 });
 
-export enum ProductLocation {
+export enum PropertyLocation {
 	ALABAMA = 'ALABAMA',
 	ALASKA = 'ALASKA',
 	ARIZONA = 'ARIZONA',
@@ -78,7 +77,6 @@ export enum ProductLocation {
 	WISCONSIN = 'WISCONSIN',
 	WYOMING = 'WYOMING',
 }
-
-registerEnumType(ProductLocation, {
-	name: 'ProductLocation',
+registerEnumType(PropertyLocation, {
+	name: 'PropertyLocation',
 });

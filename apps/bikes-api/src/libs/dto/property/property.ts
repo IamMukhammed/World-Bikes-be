@@ -1,67 +1,67 @@
 import { Field, Int, ObjectType } from '@nestjs/graphql';
 import { ObjectId } from 'mongoose';
-import { ProductLocation, ProductStatus, ProductType } from '../../enums/product.enum';
+import { PropertyLocation, PropertyStatus, PropertyType } from '../../enums/property.enum';
 import { Member, TotalCounter } from '../member/member';
 import { MeLiked } from '../like/like';
 
 @ObjectType()
-export class Product {
+export class Property {
 	@Field(() => String)
 	_id: ObjectId;
 
-	@Field(() => ProductType)
-	productType: ProductType;
+	@Field(() => PropertyType)
+	propertyType: PropertyType;
 
-	@Field(() => ProductStatus)
-	productStatus: ProductStatus;
+	@Field(() => PropertyStatus)
+	propertyStatus: PropertyStatus;
 
-	@Field(() => ProductLocation)
-	productLocation: ProductLocation;
-
-	@Field(() => String)
-	productAddress: string;
+	@Field(() => PropertyLocation)
+	propertyLocation: PropertyLocation;
 
 	@Field(() => String)
-	productTitle: string;
+	propertyAddress: string;
+
+	@Field(() => String)
+	propertyTitle: string;
 
 	@Field(() => Number)
-	productPrice: number;
+	propertyPrice: number;
 
 	@Field(() => Number)
-	productSquare: number;
-
-	@Field(() => Int, { nullable: true })
-	productYears: number;
-
-	@Field(() => Int, { nullable: true })
-	productEngineSize: number;
+	propertySquare: number;
 
 	@Field(() => Int)
-	productViews: number;
+	propertyBeds: number;
 
 	@Field(() => Int)
-	productLikes: number;
+	propertyRooms: number;
 
 	@Field(() => Int)
-	productComments: number;
+	propertyViews: number;
 
 	@Field(() => Int)
-	productRank: number;
+	propertyLikes: number;
+
+	@Field(() => Int)
+	propertyComments: number;
+
+	@Field(() => Int)
+	propertyRank: number;
 
 	@Field(() => [String])
-	productImages: string[];
+	propertyImages: string[];
 
 	@Field(() => String, { nullable: true })
-	productDesc?: string;
+	propertyDesc?: string;
 
 	@Field(() => Boolean)
-	productBarter: boolean;
+	propertyBarter: boolean;
 
 	@Field(() => Boolean)
-	productRent: boolean;
-
+	propertyRent: boolean;
+	
 	@Field(() => Boolean)
-	productSale: boolean;
+	propertySale: boolean;
 
 	@Field(() => String)
 	memberId: ObjectId;
@@ -91,9 +91,9 @@ export class Product {
 }
 
 @ObjectType()
-export class Products {
-	@Field(() => [Product])
-	list: Product[];
+export class Properties {
+	@Field(() => [Property])
+	list: Property[];
 
 	@Field(() => [TotalCounter], { nullable: true })
 	metaCounter: TotalCounter[];
