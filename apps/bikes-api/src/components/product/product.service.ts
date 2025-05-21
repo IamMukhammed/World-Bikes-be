@@ -72,7 +72,7 @@ export class ProductService {
 	}
 
 	public async updateProduct(memberId: ObjectId, input: ProductUpdate): Promise<Product> {
-		let { productStatus​​, soldAt, deletedAt } = input;
+		let { productStatus, soldAt, deletedAt } = input;
 		const search: T = {
 			_id: input._id,
 			memberId: memberId,

@@ -162,7 +162,7 @@ export class ProductsInquiry {
 	direction?: Direction;
 
 	@IsNotEmpty()
-	@Field(() => PISearch)
+	@Field(() => PISearch, { nullable: true, defaultValue: {} })
 	search: PISearch;
 }
 

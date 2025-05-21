@@ -1,16 +1,16 @@
 import { registerEnumType } from '@nestjs/graphql';
 
 export enum ProductType {
-	STANDARD = 'STANDARD', // Classic all-purpose bikes
-	CRUISER = 'CRUISER', // Harley-style low seat, long body
-	SPORT = 'SPORT', // High-speed, performance bikes
-	TOURING = 'TOURING', // Long-distance comfort motorcycles
-	DUAL_SPORT = 'DUAL_SPORT', // On-road + off-road
-	ADVENTURE = 'ADVENTURE', // Big off-road touring bikes
-	OFF_ROAD = 'OFF_ROAD', // Dirt bikes, motocross
-	SCOOTER = 'SCOOTER', // Lightweight, automatic transmission
-	MOPED = 'MOPED', // Small engine, pedal-like
-	CAFE_RACER = 'CAFE_RACER', // Retro-style lightweight racer
+	STANDARD = 'STANDARD', 		// Classic all-purpose bikes
+	CRUISER = 'CRUISER', 		// Harley-style low seat, long body
+	SPORT = 'SPORT', 			// High-speed, performance bikes
+	TOURING = 'TOURING', 		// Long-distance comfort motorcycles
+	DUAL_SPORT = 'DUAL SPORT', 	// On-road + off-road
+	ADVENTURE = 'ADVENTURE', 	// Big off-road touring bikes
+	OFF_ROAD = 'OFF ROAD', 		// Dirt bikes, motocross
+	SCOOTER = 'SCOOTER', 		// Lightweight, automatic transmission
+	MOPED = 'MOPED', 			// Small engine, pedal-like
+	CAFE_RACER = 'CAFE RACER', 	// Retro-style lightweight racer
 }
 
 registerEnumType(ProductType, {
@@ -55,26 +55,26 @@ export enum ProductLocation {
 	MONTANA = 'MONTANA',
 	NEBRASKA = 'NEBRASKA',
 	NEVADA = 'NEVADA',
-	NEW_HAMPSHIRE = 'NEW_HAMPSHIRE',
-	NEW_JERSEY = 'NEW_JERSEY',
-	NEW_MEXICO = 'NEW_MEXICO',
+	NEW_HAMPSHIRE = 'NEW HAMPSHIRE',
+	NEW_JERSEY = 'NEW JERSEY',
+	NEW_MEXICO = 'NEW MEXICO',
 	NEW_YORK = 'NEW_YORK',
-	NORTH_CAROLINA = 'NORTH_CAROLINA',
-	NORTH_DAKOTA = 'NORTH_DAKOTA',
+	NORTH_CAROLINA = 'NORTH CAROLINA',
+	NORTH_DAKOTA = 'NORTH DAKOTA',
 	OHIO = 'OHIO',
 	OKLAHOMA = 'OKLAHOMA',
 	OREGON = 'OREGON',
 	PENNSYLVANIA = 'PENNSYLVANIA',
-	RHODE_ISLAND = 'RHODE_ISLAND',
-	SOUTH_CAROLINA = 'SOUTH_CAROLINA',
-	SOUTH_DAKOTA = 'SOUTH_DAKOTA',
+	RHODE_ISLAND = 'RHODE ISLAND',
+	SOUTH_CAROLINA = 'SOUTH CAROLINA',
+	SOUTH_DAKOTA = 'SOUTH DAKOTA',
 	TENNESSEE = 'TENNESSEE',
 	TEXAS = 'TEXAS',
 	UTAH = 'UTAH',
 	VERMONT = 'VERMONT',
 	VIRGINIA = 'VIRGINIA',
 	WASHINGTON = 'WASHINGTON',
-	WEST_VIRGINIA = 'WEST_VIRGINIA',
+	WEST_VIRGINIA = 'WEST VIRGINIA',
 	WISCONSIN = 'WISCONSIN',
 	WYOMING = 'WYOMING',
 }
