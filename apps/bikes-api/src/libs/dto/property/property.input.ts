@@ -1,5 +1,5 @@
 import { Field, InputType, Int } from '@nestjs/graphql';
-import { IsIn, IsInt, IsNotEmpty, IsOptional, Length, Min } from 'class-validator';
+import { IsDefined, IsIn, IsInt, IsNotEmpty, IsNumber, IsOptional, Length, Min } from 'class-validator';
 import { PropertyLocation, PropertyStatus, PropertyType } from '../../enums/property.enum';
 import { ObjectId } from 'mongoose';
 import { Direction } from '../../enums/common.enum';
@@ -16,12 +16,12 @@ export class PropertyInput {
 	propertyLocation: PropertyLocation;
 
 	@IsNotEmpty()
-	@Length(3, 100)
+	@Length(3, 10000)
 	@Field(() => String)
 	propertyAddress: string;
 
 	@IsNotEmpty()
-	@Length(3, 100)
+	@Length(3, 100000)
 	@Field(() => String)
 	propertyTitle: string;
 
@@ -32,6 +32,12 @@ export class PropertyInput {
 	@IsNotEmpty()
 	@Field(() => Number)
 	propertySquare: number;
+
+	// @IsDefined()
+	// @IsNumber()
+	// @Min(0)
+	// @Field(() => Number)
+	// propertySquare: number;
 
 	@IsNotEmpty()
 	@IsInt()

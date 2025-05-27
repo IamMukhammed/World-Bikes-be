@@ -41,7 +41,6 @@ export class PropertyService {
 			});
 			return result;
 		} catch (err) {
-			console.log('Error, Service.model:', err.message);
 			throw new BadRequestException(Message.CREATE_FAILED);
 		}
 	}
