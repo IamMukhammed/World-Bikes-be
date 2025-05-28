@@ -56,7 +56,7 @@ export class PropertyInput {
 	propertyImages: string[];
 
 	@IsOptional()
-	@Length(5, 500)
+	@Length(5, 50000)
 	@Field(() => String, { nullable: true })
 	propertyDesc?: string;
 
