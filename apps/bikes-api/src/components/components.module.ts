@@ -7,6 +7,10 @@ import { LikeModule } from './like/like.module';
 import { ViewModule } from './view/view.module';
 import { FollowModule } from './follow/follow.module';
 import { BoardArticleModule } from './board-article/board-article.module';
+import { FaqModule } from './faq/faq.module';
+import { NotificationResolver } from './notification/notification.resolver';
+import { NotificationService } from './notification/notification.service';
+import { NotificationModule } from './notification/notification.module';
 
 @Module({
 	imports: [
@@ -18,6 +22,9 @@ import { BoardArticleModule } from './board-article/board-article.module';
 		ViewModule,
 		CommentModule,
 		FollowModule,
+		FaqModule,
+		NotificationModule,
 	],
+	providers: [NotificationResolver, NotificationService],
 })
 export class ComponentsModule {}
