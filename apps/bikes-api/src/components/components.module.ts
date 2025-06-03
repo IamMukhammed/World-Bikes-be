@@ -25,6 +25,7 @@ import { NotificationModule } from './notification/notification.module';
 		FaqModule,
 		NotificationModule,
 	],
-	providers: [NotificationResolver, NotificationService],
+	// providers: [NotificationResolver, NotificationService],
+	providers: [],
 })
 export class ComponentsModule {}
