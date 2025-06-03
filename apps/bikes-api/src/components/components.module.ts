@@ -8,9 +8,10 @@ import { ViewModule } from './view/view.module';
 import { FollowModule } from './follow/follow.module';
 import { BoardArticleModule } from './board-article/board-article.module';
 import { FaqModule } from './faq/faq.module';
+import { NotificationModule } from './notification/notification.module';
+
 import { NotificationResolver } from './notification/notification.resolver';
 import { NotificationService } from './notification/notification.service';
-import { NotificationModule } from './notification/notification.module';
 
 @Module({
 	imports: [
