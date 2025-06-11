@@ -41,5 +41,5 @@ export class NotificationInput {
 	receiverId: string;
 
 	@Field()
-	content: string;
+	messages: string;
 }

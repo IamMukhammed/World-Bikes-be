@@ -18,13 +18,14 @@ export class MessageService {
 			phone: input.phone,
 			message: input.message,
 			messageRefId: input.messageRefId,
+			// ...(messageRefId && { messageRefId }),
 			memberId: new ObjectId(input.memberId),
 			createdAt: new Date(),
 		};
 		this.messages.push(newMessage);
 		this.notificationService.create({
 			receiverId: input.memberId, // yoki admin ID
-			content: `Yangi xabar: ${input.message.substring(0, 50)}...`,
+			messages: `New message: ${input.message.substring(0, 50)}...`,
 		});
 
 		return newMessage;

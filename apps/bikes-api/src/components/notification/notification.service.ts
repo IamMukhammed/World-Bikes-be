@@ -215,7 +215,7 @@ export class NotificationService {
 		const newNotification: Notification = {
 			_id: new ObjectId(),
 			receiverId: new ObjectId(input.receiverId),
-			content: input.content,
+			content: input.messages,
 			isRead: false,
 			createdAt: new Date(),
 		};
