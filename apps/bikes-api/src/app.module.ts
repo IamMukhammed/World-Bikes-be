@@ -9,6 +9,7 @@ import { ComponentsModule } from './components/components.module';
 import { DatabaseModule } from './database/database.module';
 import { T } from './libs/types/common';
 import { SocketModule } from './socket/socket.module';
+import { MessageModule } from './components/message/message.module';
 
 @Module({
 	imports: [
@@ -18,6 +19,7 @@ import { SocketModule } from './socket/socket.module';
 			playground: true,
 			uploads: false,
 			autoSchemaFile: true,
+			installSubscriptionHandlers: true,
 			formatError: (error: T) => {
 				const graphQLFormattedError = {
 					code: error?.extensions.code,
@@ -31,6 +33,7 @@ import { SocketModule } from './socket/socket.module';
 		ComponentsModule,
 		DatabaseModule,
 		SocketModule,
+		MessageModule,
 	],
 	controllers: [AppController],
 	providers: [AppService, AppResolver],

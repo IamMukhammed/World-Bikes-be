@@ -12,6 +12,9 @@ import { NotificationModule } from './notification/notification.module';
 
 import { NotificationResolver } from './notification/notification.resolver';
 import { NotificationService } from './notification/notification.service';
+import { MessageService } from './message/message.service';
+import { MessageResolver } from './message/message.resolver';
+import { MessageModule } from './message/message.module';
 
 @Module({
 	imports: [
@@ -25,8 +28,9 @@ import { NotificationService } from './notification/notification.service';
 		FollowModule,
 		FaqModule,
 		NotificationModule,
+		MessageModule,
 	],
 	// providers: [NotificationResolver, NotificationService],
-	providers: [],
+	providers: [MessageService, MessageResolver],
 })
 export class ComponentsModule {}

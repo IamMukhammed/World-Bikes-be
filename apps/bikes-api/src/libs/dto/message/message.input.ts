@@ -1,33 +1,22 @@
-import { InputType, Field } from '@nestjs/graphql';
-import { ObjectId } from 'mongoose';
-import { MessageGroup, MessageStatus, MessageType } from '../../enums/message.enum';
+import { InputType, Field, ID } from '@nestjs/graphql';
 
 @InputType()
 export class MessageInput {
-	@Field(() => MessageType)
-	messageType: MessageType;
+	@Field()
+	name: string;
 
-	@Field(() => MessageStatus, { defaultValue: MessageStatus.WAIT })
-	messageStatus?: MessageStatus;
+	@Field()
+	email: string;
 
-	@Field(() => MessageGroup)
-	messageGroup: MessageGroup;
+	@Field()
+	phone: string;
 
-	@Field(() => String)
-	messageTitle: string;
+	@Field()
+	message: string;
 
-	@Field(() => String, { nullable: true })
-	messageDesc?: string;
+	@Field({ nullable: true })
+	messageRefId?: string;
 
-	@Field(() => String)
-	authorId: ObjectId;
-
-	@Field(() => String)
-	receiverId: ObjectId;
-
-	@Field(() => String, { nullable: true })
-	propertyId?: ObjectId;
-
-	// @Field(() => String, { nullable: true })
-	// articleId?: ObjectId;
+	@Field(() => ID, { nullable: true })
+	memberId?: string; // String formatda qabul qilamiz, keyin service ichida ObjectId ga aylantiramiz
 }

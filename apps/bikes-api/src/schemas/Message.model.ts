@@ -1,49 +1,29 @@
-import { Schema } from 'mongoose';
-import { MessageGroup, MessageStatus, MessageType } from '../libs/enums/message.enum';
+import { ObjectType, Field, ID } from '@nestjs/graphql';
+import { ObjectId } from 'mongodb';
 
-const MessageSchema = new Schema(
-	{
-		messageType: {
-			type: String,
-			enum: MessageType,
-			required: true,
-		},
+@ObjectType()
+export class Message {
+	@Field(() => ID)
+	_id: ObjectId;
 
-		MessageStatus: {
-			type: String,
-			enum: MessageStatus,
-			default: MessageStatus.WAIT,
-		},
+	@Field()
+	name: string;
 
-		messageGroup: {
-			type: String,
-			enum: MessageGroup,
-			required: true,
-		},
+	@Field()
+	email: string;
 
-		messageDesc: {
-			type: Schema.Types.ObjectId,
-			required: true,
-			ref: 'Member',
-		},
+	@Field()
+	phone: string;
 
-		receiverId: {
-			type: Schema.Types.ObjectId,
-			required: true,
-			ref: 'Member',
-		},
+	@Field()
+	message: string;
 
-		propertyId: {
-			type: Schema.Types.ObjectId,
-			ref: 'Property',
-		},
+	@Field({ nullable: true })
+	messageRefId?: string;
 
-		// articleId: {
-		//     type: Schema.Types.ObjectId,
-		//     ref: 'BoardArticle',
-		// },
-	},
-	{ timestamps: true, collection: 'message' },
-);
+	@Field(() => ID, { nullable: true })
+	memberId?: ObjectId;
 
-export default MessageSchema;
+	@Field()
+	createdAt: Date;
+}
